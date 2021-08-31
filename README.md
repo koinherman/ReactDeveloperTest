@@ -3,8 +3,8 @@
 ## Prerequisities
 yarn installed globally
 ## Setup
-yarn install
-yarn storybook
+1. yarn install
+2. yarn storybook
 
 ### Component Setup
 Creating a new component can be done via Plop templates. This will scaffold the compoent for you.
