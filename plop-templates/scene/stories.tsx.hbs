@@ -1,0 +1,38 @@
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { withKnobs, number, boolean, select, text } from '@storybook/addon-knobs';
+import { {{pascalCase name}} } from '../';
+import Container from '@material-ui/core/Container';
+
+import { FeatureCategory } from '{{featureCategoryPath}}';
+
+const StorySubject = "{{pascalCase featureName}}";
+const StoryKind = "{{pascalCase name}}";
+
+// Knob Variables
+const contentGroupId = "Content";
+
+// {{pascalCase name}} Default
+storiesOf(`${FeatureCategory}/${StorySubject}/${StoryKind}`, module)
+  .addParameters({
+    component: {{pascalCase name}},
+    subcomponents: {
+    },
+  })
+  .addDecorator(withKnobs({
+    escapeHTML: false,
+  }))
+  .add(
+    'Basic',
+    () => {
+      const headingKnob = text('Heading', '{{pascalCase name}} Heading', contentGroupId);
+       
+      return (
+        <Container>
+          <{{pascalCase name}} 
+            sampleProperty={headingKnob} 
+            />
+        </Container>
+      );
+    }
+  )

@@ -1,0 +1,22 @@
+import React, { FunctionComponent } from 'react';
+import { H, HeadingColourVariants, HeadingAligmentVariants } from 'components/Heading';
+import { Text, Image, RichText } from 'components/SitecoreReact';
+import use{{pascalCase name}}Styles, { {{pascalCase name}}Classes } from "./{{pascalCase name}}Styles";
+
+export interface {{pascalCase name}}Props {
+  sampleProperty: string;
+}
+
+export const {{pascalCase name}}: FunctionComponent<{{pascalCase name}}Props> = ({ 
+  sampleProperty
+}) => {
+  const useStyles: {{pascalCase name}}Classes = use{{pascalCase name}}Styles({});
+  return (
+    <div className={useStyles.{{camelCase name}} }>
+      <H level={3} textColour={HeadingColourVariants.black} alignment={HeadingAligmentVariants.left}>
+        <Text field={sampleProperty} />
+      </H>
+          <p>{{pascalCase name}}</p>
+    </div>
+  )
+}

@@ -1,0 +1,18 @@
+import { Classes, Styles } from "jss";
+import { createUseStyles } from "react-jss";
+import { {{pascalCase name}}Props } from "./{{pascalCase name}}";
+import { media } from 'styles/mixins';
+import { colours, fontSizes, fonts } from 'styles/variables';
+
+export type {{pascalCase name}}ClassNames = "{{camelCase name}}";
+export type {{pascalCase name}}Classes = Classes<{{pascalCase name}}ClassNames>;
+export type {{pascalCase name}}Styles = Styles<{{pascalCase name}}ClassNames>;
+export type {{pascalCase name}}StylesProps = {{pascalCase name}}Props;
+const getStyles: {{pascalCase name}}Styles = {
+    {{camelCase name}}: {
+        
+    },
+};
+
+const use{{pascalCase name}}Styles: (data?: any) => {{pascalCase name}}Classes = createUseStyles<{{pascalCase name}}ClassNames>(getStyles);
+export default use{{pascalCase name}}Styles;
